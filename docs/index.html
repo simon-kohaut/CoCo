@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="The Constitutional Controller: Doubt-Calibrated Steering of Compliant Agents">
+  <meta name="description" content="CoCo integrates neuro-symbolic reasoning with a learned self-doubt density to steer autonomous agents safely and compliantly in uncertain, regulated environments.">
+  <meta name="keywords" content="Neuro-Symbolic AI, Autonomous Agents, Probabilistic Logic Programming, UAV, Safety, Compliance, Advanced Air Mobility, Self-Doubt">
+  <meta name="author" content="Simon Kohaut, Felix Divo, Navid Hamid, Benedict Flade, Julian Eggert, Devendra Singh Dhami, Kristian Kersting">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Artificial Intelligence and Machine Learning">
+  <meta property="og:title" content="The Constitutional Controller: Doubt-Calibrated Steering of Compliant Agents">
+  <meta property="og:description" content="CoCo integrates neuro-symbolic reasoning with a learned self-doubt density to steer autonomous agents safely and compliantly in uncertain, regulated environments.">
+  <meta property="og:url" content="https://simon-kohaut.github.io/CoCo/">
+  <meta property="og:image" content="https://raw.githubusercontent.com/simon-kohaut/CoCo/main/docs/static/images/architecture.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Constitutional Controller: Doubt-Calibrated Steering of Compliant Agents - Research Preview">
+  <meta property="article:published_time" content="2026-06-18T00:00:00.000Z">
+  <meta property="article:author" content="Simon Kohaut">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="Neuro-Symbolic AI">
+  <meta property="article:tag" content="Autonomous Agents">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="The Constitutional Controller: Doubt-Calibrated Steering of Compliant Agents">
+  <meta name="citation_author" content="Kohaut, Simon">
+  <meta name="citation_author" content="Divo, Felix">
+  <meta name="citation_author" content="Hamid, Navid">
+  <meta name="citation_author" content="Flade, Benedict">
+  <meta name="citation_author" content="Eggert, Julian">
+  <meta name="citation_author" content="Dhami, Devendra Singh">
+  <meta name="citation_author" content="Kersting, Kristian">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="IEEE/RSJ International Conference on Intelligent Robots and Systems">
+
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <title>The Constitutional Controller: Doubt-Calibrated Steering of Compliant Agents - Simon Kohaut, Felix Divo, Navid Hamid, Benedict Flade, Julian Eggert, Devendra Singh Dhami, Kristian Kersting</title>
+  <link rel="canonical" href="https://simon-kohaut.github.io/CoCo/">
+
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "The Constitutional Controller: Doubt-Calibrated Steering of Compliant Agents",
+    "description": "CoCo integrates neuro-symbolic reasoning with a learned self-doubt density to steer autonomous agents safely and compliantly in uncertain, regulated environments.",
+    "author": [
+      {"@type": "Person", "name": "Simon Kohaut", "affiliation": {"@type": "Organization", "name": "TU Darmstadt"}},
+      {"@type": "Person", "name": "Felix Divo", "affiliation": {"@type": "Organization", "name": "TU Darmstadt"}},
+      {"@type": "Person", "name": "Navid Hamid", "affiliation": {"@type": "Organization", "name": "TU Darmstadt"}},
+      {"@type": "Person", "name": "Benedict Flade", "affiliation": {"@type": "Organization", "name": "Honda Research Institute Europe"}},
+      {"@type": "Person", "name": "Julian Eggert", "affiliation": {"@type": "Organization", "name": "Honda Research Institute Europe"}},
+      {"@type": "Person", "name": "Devendra Singh Dhami", "affiliation": {"@type": "Organization", "name": "TU Eindhoven"}},
+      {"@type": "Person", "name": "Kristian Kersting", "affiliation": {"@type": "Organization", "name": "TU Darmstadt"}}
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "IEEE/RSJ International Conference on Intelligent Robots and Systems"
+    },
+    "datePublished": "2026",
+    "url": "https://simon-kohaut.github.io/CoCo/",
+    "image": "https://raw.githubusercontent.com/simon-kohaut/CoCo/main/docs/static/images/architecture.jpg",
+    "keywords": ["Neuro-Symbolic AI", "Autonomous Agents", "Probabilistic Logic Programming", "UAV", "Safety", "Compliance", "Advanced Air Mobility"],
+    "abstract": "Ensuring reliable and rule-compliant behavior of autonomous agents in uncertain environments remains a fundamental challenge in modern robotics. Our work shows how neuro-symbolic systems, which integrate probabilistic, symbolic white-box reasoning models with deep learning methods, offer a powerful solution to this challenge. They enable the simultaneous consideration of explicit rules and neural models trained on noisy data, combining the strengths of structured reasoning with flexible representations. To this end, we introduce the Constitutional Controller (CoCo), a novel framework designed to enhance the safety and reliability of agents by reasoning over deep probabilistic logic programs that represent constraints, such as those found in shared traffic spaces. Furthermore, we propose the concept of self-doubt, implemented as a probability density conditioned on doubt features such as travel velocity, employed sensors, or health factors. In a real-world aerial mobility study, we demonstrate CoCo's advantages for intelligent autonomous systems to learn appropriate doubts and navigate complex, uncertain environments safely and compliantly.",
+    "citation": "@inproceedings{kohaut2026coco,\n  title={The Constitutional Controller: Doubt-Calibrated Steering of Compliant Agents},\n  author={Simon Kohaut and Felix Divo and Navid Hamid and Benedict Flade and Julian Eggert and Devendra Singh Dhami and Kristian Kersting},\n  booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},\n  year={2026}\n}",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://www.aiml.informatik.tu-darmstadt.de/"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Neuro-Symbolic AI"
+      },
+      {
+        "@type": "Thing",
+        "name": "Autonomous Robotics"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Artificial Intelligence and Machine Learning",
+    "url": "https://www.aiml.informatik.tu-darmstadt.de",
+    "logo": "https://www.aiml.informatik.tu-darmstadt.de/icons/logos/aimlCleanV2.svg",
+    "sameAs": []
+  }
+  </script>
+</head>
+<body>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- More Works Dropdown -->
+  <div class="more-works-container">
+    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
+      <i class="fas fa-flask"></i>
+      More Works
+      <i class="fas fa-chevron-down dropdown-arrow"></i>
+    </button>
+    <div class="more-works-dropdown" id="moreWorksDropdown">
+      <div class="dropdown-header">
+        <h4>More Works from Our Lab</h4>
+        <button class="close-btn" onclick="toggleMoreWorks()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="works-list">
+        <a href="https://arxiv.org/abs/2501.01439" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>Probabilistic Mission Design for Neuro-Symbolic Unmanned Aircraft Systems</h5>
+            <p>Neuro-Symbolic systems for probabilistic, constrained navigation in regulated air traffic spaces.</p>
+            <span class="work-venue">IEEE Transactions on Intelligent Transportation Systems 2025</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://arxiv.org/abs/2412.18347" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>The Constitutional Filter: Bayesian Estimation of Compliant Agents</h5>
+            <p>Bayesian filtering augmented with deep probabilistic logic programming for motion prediction in shared traffic spaces.</p>
+            <span class="work-venue">2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://arxiv.org/abs/2602.05625" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>Reactive Knowledge Representation and Asynchronous Reasoning</h5>
+            <p>Reactive and asynchronous probabilistic logic programming for real-time inference systems.</p>
+            <span class="work-venue">Preprint</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://arxiv.org/abs/2512.01095" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>CycliST: A Video Language Model Benchmark for Reasoning on Cyclical State Transitions</h5>
+            <p>Benchmark dataset evaluating Video Language Models on textual reasoning over cyclical state transitions.</p>
+            <span class="work-venue">Journal of Data-centric Machine Learning Research (DMLR) 2026</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">The Constitutional Controller: Doubt-Calibrated Steering of Compliant Agents</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://simon-kohaut.github.io" target="_blank">Simon Kohaut</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                Felix Divo<sup>1</sup>,
+              </span>
+              <span class="author-block">
+                Navid Hamid<sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.honda-ri.de/" target="_blank">Benedict Flade</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.honda-ri.de/" target="_blank">Julian Eggert</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://sites.google.com/view/devendradhami" target="_blank">Devendra Singh Dhami</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://ml-research.github.io/people/kkersting/index.html" target="_blank">Kristian Kersting</a><sup>1,4,5,6</sup>
+              </span>
+              </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <sup>1</sup>Artificial Intelligence and Machine Learning Lab - TU Darmstadt
+                  <br><sup>2</sup>Honda Research Institute Europe
+                  <br><sup>3</sup>Uncertainty in Artificial Intelligence Group - TU Eindhoven
+                  <br><sup>4</sup>Hessian AI &nbsp;&nbsp; <sup>5</sup>Centre for Cognitive Science &nbsp;&nbsp; <sup>6</sup>DFKI
+                  <br>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2026
+                </span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a href="https://github.com/simon-kohaut/CoCo" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                  </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser figure -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/architecture.jpg" alt="CoCo architecture overview" loading="lazy"/>
+      <h2 class="subtitle has-text-centered">
+        CoCo integrates neuro-symbolic reasoning and doubt modeling to steer autonomous agents towards safety and compliance.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser figure -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Ensuring reliable and rule-compliant behavior of autonomous agents in uncertain environments remains a fundamental challenge in modern robotics.
+            Our work shows how neuro-symbolic systems, which integrate probabilistic, symbolic white-box reasoning models with deep learning methods, offer a powerful solution to this challenge.
+            They enable the simultaneous consideration of explicit rules and neural models trained on noisy data, combining the strengths of structured reasoning with flexible representations.
+            To this end, we introduce the <strong>Constitutional Controller (CoCo)</strong>, a novel framework designed to enhance the safety and reliability of agents by reasoning over deep probabilistic logic programs that represent constraints, such as those found in shared traffic spaces.
+            Furthermore, we propose the concept of <strong>self-doubt</strong>, implemented as a probability density conditioned on doubt features such as travel velocity, employed sensors, or health factors.
+            In a real-world aerial mobility study, we demonstrate CoCo's advantages for intelligent autonomous systems to learn appropriate doubts and navigate complex, uncertain environments safely and compliantly.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <img src="static/images/architecture.jpg" alt="CoCo system architecture" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          CoCo's architecture: Constitution, doubt model, and planner work in concert.
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/star_maps.jpg" alt="StaR Maps in an urban environment" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          StaR Maps capture probabilistic spatial relations (e.g., over park, distance to road) from noisy map data.
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/compliance_landscape.jpg" alt="Compliance landscape" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          Doubt-calibrated compliance landscape P&#x3B8;(C<sub>t</sub>|x, z) for varying UAV velocities.
+       </h2>
+     </div>
+     <div class="item">
+      <img src="static/images/trajectories.jpg" alt="Trajectory comparison CoCo vs ProMis" loading="lazy"/>
+      <h2 class="subtitle has-text-centered">
+        CoCo dynamically selects safe paths and adapts speed; the ProMis baseline crashes at high velocity.
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@inproceedings{kohaut2026coco,
+  title={The Constitutional Controller: Doubt-Calibrated Steering of Compliant Agents},
+  author={Simon Kohaut and Felix Divo and Navid Hamid and Benedict Flade and Julian Eggert and Devendra Singh Dhami and Kristian Kersting},
+  booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year={2026}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+  </html>

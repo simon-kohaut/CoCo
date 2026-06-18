@@ -18,7 +18,7 @@
   <meta property="og:title" content="The Constitutional Controller: Doubt-Calibrated Steering of Compliant Agents">
   <meta property="og:description" content="CoCo integrates neuro-symbolic reasoning with a learned self-doubt density to steer autonomous agents safely and compliantly in uncertain, regulated environments.">
   <meta property="og:url" content="https://simon-kohaut.github.io/CoCo/">
-  <meta property="og:image" content="https://raw.githubusercontent.com/simon-kohaut/CoCo/main/docs/static/images/architecture.jpg">
+  <meta property="og:image" content="https://raw.githubusercontent.com/simon-kohaut/CoCo/main/docs/static/images/fig1.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="The Constitutional Controller: Doubt-Calibrated Steering of Compliant Agents - Research Preview">
@@ -111,7 +111,7 @@
     },
     "datePublished": "2026",
     "url": "https://simon-kohaut.github.io/CoCo/",
-    "image": "https://raw.githubusercontent.com/simon-kohaut/CoCo/main/docs/static/images/architecture.jpg",
+    "image": "https://raw.githubusercontent.com/simon-kohaut/CoCo/main/docs/static/images/fig1.png",
     "keywords": ["Neuro-Symbolic AI", "Autonomous Agents", "Probabilistic Logic Programming", "UAV", "Safety", "Compliance", "Advanced Air Mobility"],
     "abstract": "Ensuring reliable and rule-compliant behavior of autonomous agents in uncertain environments remains a fundamental challenge in modern robotics. Our work shows how neuro-symbolic systems, which integrate probabilistic, symbolic white-box reasoning models with deep learning methods, offer a powerful solution to this challenge. They enable the simultaneous consideration of explicit rules and neural models trained on noisy data, combining the strengths of structured reasoning with flexible representations. To this end, we introduce the Constitutional Controller (CoCo), a novel framework designed to enhance the safety and reliability of agents by reasoning over deep probabilistic logic programs that represent constraints, such as those found in shared traffic spaces. Furthermore, we propose the concept of self-doubt, implemented as a probability density conditioned on doubt features such as travel velocity, employed sensors, or health factors. In a real-world aerial mobility study, we demonstrate CoCo's advantages for intelligent autonomous systems to learn appropriate doubts and navigate complex, uncertain environments safely and compliantly.",
     "citation": "@inproceedings{kohaut2026coco,\n  title={The Constitutional Controller: Doubt-Calibrated Steering of Compliant Agents},\n  author={Simon Kohaut and Felix Divo and Navid Hamid and Benedict Flade and Julian Eggert and Devendra Singh Dhami and Kristian Kersting},\n  booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},\n  year={2026}\n}",
@@ -193,14 +193,6 @@
           </div>
           <i class="fas fa-external-link-alt"></i>
         </a>
-        <a href="https://arxiv.org/abs/2512.01095" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>CycliST: A Video Language Model Benchmark for Reasoning on Cyclical State Transitions</h5>
-            <p>Benchmark dataset evaluating Video Language Models on textual reasoning over cyclical state transitions.</p>
-            <span class="work-venue">Journal of Data-centric Machine Learning Research (DMLR) 2026</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
       </div>
     </div>
   </div>
@@ -217,7 +209,7 @@
                 <a href="https://simon-kohaut.github.io" target="_blank">Simon Kohaut</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                Felix Divo<sup>1</sup>,
+                <a href="https://felix.divo.link" target="_blank">Felix Divo</a><sup>1</sup>,
               </span>
               <span class="author-block">
                 Navid Hamid<sup>1</sup>,
@@ -248,6 +240,26 @@
               <div class="column has-text-centered">
                 <div class="publication-links">
                   <span class="link-block">
+                    <a href="https://arxiv.org/pdf/2507.15478" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2507.15478" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
                     <a href="https://github.com/simon-kohaut/CoCo" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -268,7 +280,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/architecture.jpg" alt="CoCo architecture overview" loading="lazy"/>
+      <img src="static/images/fig1.png" alt="CoCo concept overview" loading="lazy"/>
       <h2 class="subtitle has-text-centered">
         CoCo integrates neuro-symbolic reasoning and doubt modeling to steer autonomous agents towards safety and compliance.
       </h2>
@@ -304,30 +316,36 @@
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <img src="static/images/architecture.jpg" alt="CoCo system architecture" loading="lazy"/>
+      <div class="item">
+        <img src="static/images/fig1.png" alt="CoCo concept: Constitution, Plan, Control, Doubt cycle over a city map" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-          CoCo's architecture: Constitution, doubt model, and planner work in concert.
+          Constitutional Control: the agent's neuro-symbolic Constitution encodes traffic rules and feeds a doubt-aware planner and controller.
         </h2>
       </div>
       <div class="item">
-        <img src="static/images/star_maps.jpg" alt="StaR Maps in an urban environment" loading="lazy"/>
+        <img src="static/images/fig2.png" alt="Doubt-calibrated compliance landscape for varying UAV velocity" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-          StaR Maps capture probabilistic spatial relations (e.g., over park, distance to road) from noisy map data.
+          As target velocity increases, the doubt density widens the risk buffer around obstacles — the agent becomes more conservative at speed.
         </h2>
       </div>
       <div class="item">
-        <img src="static/images/compliance_landscape.jpg" alt="Compliance landscape" loading="lazy"/>
+        <img src="static/images/fig3.png" alt="Doubt-calibrated compliance landscape for varying UAV heading" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-          Doubt-calibrated compliance landscape P&#x3B8;(C<sub>t</sub>|x, z) for varying UAV velocities.
-       </h2>
-     </div>
-     <div class="item">
-      <img src="static/images/trajectories.jpg" alt="Trajectory comparison CoCo vs ProMis" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        CoCo dynamically selects safe paths and adapts speed; the ProMis baseline crashes at high velocity.
-      </h2>
-    </div>
+          Varying heading angle rotates the doubt density, shifting which regions appear risky — CoCo adapts its safety margin to the direction of travel.
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/fig4.png" alt="Trajectory comparison: CoCo (top) vs ProMis baseline (bottom)" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          At high velocity, the ProMis baseline greedily routes through the center and crashes (red ✕). CoCo's doubt model selects a safer detour.
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/fig5.png" alt="CoCo dynamically adapting velocity along the trajectory" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          When velocity is unconstrained, CoCo dynamically slows near restricted zones and accelerates on open segments — safe, compliant, and time-effective.
+        </h2>
+      </div>
   </div>
 </div>
 </div>

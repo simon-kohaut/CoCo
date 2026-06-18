@@ -112,6 +112,15 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+.teaser img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 720px;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
 
 /* Publication Content Styling */
 .publication-title {
@@ -277,10 +286,13 @@ body {
 
 .results-carousel .item img,
 .results-carousel video {
-  margin: 0;
+  margin: 0 auto;
+  display: block;
   border-radius: var(--border-radius);
-  width: 100%;
-  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 420px;
+  object-fit: contain;
 }
 
 .results-carousel .subtitle {

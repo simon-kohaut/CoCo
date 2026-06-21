@@ -9,17 +9,9 @@
 #
 
 # CoCo
-from control import ConstitutionalController
-from doubt import DoubtDensity
+from .control import ConstitutionalController
+from .doubt import DoubtDensity
 
 __all__ = ["ConstitutionalController", "DoubtDensity"]
 __version__ = "0.0.1"
 __author__ = "Simon Kohaut"
-
-
-def get_author():
-    return __author__
-
-
-def get_version():
-    return __version__

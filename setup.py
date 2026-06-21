@@ -1,4 +1,4 @@
-"""Sets up the CoCO package for installation."""
+"""Sets up the CoCo package for installation."""
 
 #
 # Copyright (c) Simon Kohaut, Felix Divo, and contributors
@@ -23,7 +23,7 @@ with open("README.md", encoding="utf8") as readme:
     long_description = readme.read()
 
 setuptools.setup(
-    name="coco",
+    name="python-coco",
     version=version,
     author=author,
     author_email="simon.kohaut@cs.tu-darmstadt.de",
@@ -43,7 +43,7 @@ setuptools.setup(
     python_requires=">=3.10",
     install_requires=[
         # probabilistic logic in mission design
-        "promis",
+        "promis==4.0.0.dev2",
         # probabilistic modelling of doubt density
         "torch",
         "nflows",

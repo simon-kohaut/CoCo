@@ -1,29 +1,21 @@
-"""The Constitional Controller for navigating constrained and uncertain environment with ProMis."""
+"""The Constitutional Controller for navigating constrained and uncertain environments."""
 
 #
 # Copyright (c) Simon Kohaut, Felix Divo, and contributors
 #
-# This file is part of CoCO and licensed under the BSD 3-Clause License.
-# You should have received a copy of the BSD 3-Clause License along with CoCO.
+# This file is part of CoCo and licensed under the BSD 3-Clause License.
+# You should have received a copy of the BSD 3-Clause License along with CoCo.
 # If not, see https://opensource.org/license/bsd-3-clause/.
 #
 
 # Standard Library
 from collections.abc import Callable
 from copy import deepcopy
-from pickle import dump, load
 
 # Third Party
 import torch
-from nflows.distributions.normal import StandardNormal
-from nflows.flows.base import Flow
-from nflows.transforms.autoregressive import MaskedAffineAutoregressiveTransform
-from nflows.transforms.base import CompositeTransform
-from nflows.transforms.permutations import ReversePermutation
 from numpy import array, mean
 from numpy.typing import NDArray
-from sklearn.preprocessing import OneHotEncoder
-from tqdm import tqdm
 from promis.geo import Collection
 
 
